@@ -8,10 +8,15 @@ class SetlistController < ApplicationController
     @setlist = Setlist.new(setlist_params)
 
     if @setlist.save
-      redirect_to setlist_path, notice: "You have created a setlist!"
+      redirect_to setlist_url, notice: "You have created a setlist!"
     else
       render :new
     end
+  end
+
+  def new
+    @setlist = Setlist.new
+    @setlist.save
   end
 
   private
