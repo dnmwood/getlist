@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-!Setlist.delete_all
-!Song.delete_all
-
-5.times do |x|
-  Setlist.create(title: "Setlist ##{x}", description: "This is a setlist.")
-end
-
-5.times do |x|
-  Song.create(title: "Song ##{x}", duration: 90)
-end
+# !Setlist.delete_all
+# !Song.delete_all
+#
+# 5.times do |x|
+#   Setlist.create(title: "Setlist ##{x}", description: "This is a setlist.")
+# end
+#
+# 5.times do |x|
+#   Song.create(title: "Song ##{x}", duration: 90)
+# end
