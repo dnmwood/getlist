@@ -7,13 +7,13 @@
 
   <body>
     <h1><%= @setlist.title %></h1>
-    <form id="songForm">
-      Song title: <input type="text" song="song" />
-      <input type="submit" value="Add song" />
-    </form>
     <ul>
     </ul>
-    <!-- <button id="addButton">add song</button><br> -->
+    <form id="songForm">
+      Song title: <input type="text" song="song" />
+      <input type="integer" duration="duration" />
+      <button id="addButton">Add song</button><br>
+    </form>
 
     <script type="text/javascript" src="/jquery.js"></script>
     <script type="text/javascript" src="/main.js"></script>
