@@ -1,3 +1,8 @@
-<button type="button" name="button">Add song</button>
-  <script type="text/javascript">
-  </script>
+<%= form_for @setlist do |f| %>
+  <div>
+    <%= f.label :title, "Song title:" %><br><br>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <%= f.submit "Submit" %>
+<% end %>

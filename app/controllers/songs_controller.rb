@@ -12,6 +12,17 @@ class SongsController < ApplicationController
     end
   end
 
+  def update
+    @setlist = Setlist.find(params[:id])
+
+    if @setlist.update_attributes(setlist_params)
+      redirect_to setlist_url(@setlist)
+    else
+      render :edit
+    end
+  end
+
+
   def new
     @song = Song.new
   end

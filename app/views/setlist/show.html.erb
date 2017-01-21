@@ -2,15 +2,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="main.js"></script>
-    <h2><%= @setlist.title %></h2>
     <meta charset="utf-8">
   </head>
+
   <body>
-    <div class="container">
-      <button type="button" name="button">Add song</button>
-      <ul class="song_list" id="song_list">
-      </ul>
-    </div>
+    <h1><%= @setlist.title %></h1>
+    <form id="songForm">
+      Song title: <input type="text" song="song" />
+      <input type="submit" value="Add song" />
+    </form>
+    <ul>
+    </ul>
+    <!-- <button id="addButton">add song</button><br> -->
+
+    <script type="text/javascript" src="/jquery.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
   </body>
 </html>
