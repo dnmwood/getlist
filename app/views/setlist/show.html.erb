@@ -1,4 +1,3 @@
-<!-- This is your current setlist, add songs here -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,15 +6,13 @@
 
   <body>
     <h1><%= @setlist.title %></h1>
-    <ul>
-    </ul>
-    <form id="songForm">
-      Song title: <input type="text" song="song" />
-      <input type="integer" duration="duration" />
-      <button id="addButton">Add song</button><br>
-    </form>
-
-    <script type="text/javascript" src="/jquery.js"></script>
-    <script type="text/javascript" src="/main.js"></script>
+      <div class="container">
+        <ul class="list">
+        </ul>
+      </div>
+      <form id="songForm">
+        Song title: <input id="textInput" type="text" song="song" />
+        <button id="addButton">add song</button><br>
+      </form>
   </body>
 </html>
