@@ -1,4 +1,5 @@
 class SetlistController < ApplicationController
+  attr_accessor
 
   def index
     @setlists = Setlist.all

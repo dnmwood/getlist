@@ -6,11 +6,14 @@
 
   <body>
     <h1><%= @setlist.title %></h1>
+      <%= render 'song' %>
       <div class="container">
         <ul class="list">
+          <% @setlist.songs.each do |x| %>
+          <%= x.title %>
+          <% end %>
         </ul>
       </div>
-      <%= render 'song' %>
         <!-- Song title: <input id="textInput" autocomplete="off" type="text" song="song" />
         <button id="addButton">add song</button><br> -->
   </body>

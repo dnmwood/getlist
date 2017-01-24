@@ -6,9 +6,16 @@ h1, h2 {
   text-align: center;
 }
 
+li {
+  list-style: none;
+  text-align: center;
+  display: block;
+}
 
-ul {
-   list-style: none;
+.list {
+  list-style: none;
+  text-align: center;
+  display: block;
 }
 
 body {

@@ -14,12 +14,16 @@ $(document).ready(function () {
 // });
 
 $(document).ready(function($) {
-  $("#addButton").on('click', function(event) {
+  $("#new_song").on('submit', function(event) {
+    event.preventDefault();
     $.ajax({
-      url: "/setlist//songs",
+      url: $(this).attr("action"),
       method: "POST",
-      data: {
-      title: $("#textInput").val()}
+      data: $(this).serialize()
+    }).done(function () {
+      var textInputVal = document.getElementById('song_title').value;
+      $('.list').append('<li>' + textInputVal + '</li>')
+      $('#song_title').val("");
     });
   });
 
