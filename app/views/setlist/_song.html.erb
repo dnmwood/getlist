@@ -1,4 +1,4 @@
-<%= form_for @setlist do |f| %>
+<%= form_for [@setlist, Song.new] do |f| %>
   <div>
     <%= f.label :title, "Song title:" %><br><br>
     <%= f.text_field :title %>

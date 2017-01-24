@@ -3,12 +3,11 @@ class SongsController < ApplicationController
 
   def create
     @song = @setlist.songs.create(song_params)
-    @song.setlist = current_setlist
 
     if @song.save
       redirect_to @setlist
     else
-      notice: "Could not add song."
+      redirect_to @setlist, alert: "Could not add song."
     end
   end
 
@@ -30,7 +29,7 @@ class SongsController < ApplicationController
   private
 
   def set_setlist
-    @setlist = Setlist.find(params[:song_id])
+    @setlist = Setlist.find(params[:setlist_id])
   end
 
   def song_params
