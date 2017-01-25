@@ -10,8 +10,18 @@
       <div class="container">
         <ul class="list">
           <% @setlist.songs.each do |x| %>
-          <%= x.title %>
+          <%= x.title %><%= x.duration %>
           <% end %>
+
+          <!-- Set Duration counter -->
+          <% total_duration = @setlist.songs.sum(:duration) %>
+          <% minutes = total_duration / 60 %>
+          <% seconds = total_duration - (minutes * 60) %>
+            <% if 9 >= seconds %>
+              <h2>Total Setlist Duration: <%= "#{minutes}:0#{seconds}" %></h2>
+            <% else %>
+              <h2>Total Setlist Duration: <%= "#{minutes}:#{seconds}" %></h2>
+            <% end %>
         </ul>
       </div>
         <!-- Song title: <input id="textInput" autocomplete="off" type="text" song="song" />

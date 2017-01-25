@@ -2,7 +2,10 @@
   <div>
     <%= f.label :title, "Song title:" %><br><br>
     <%= f.text_field :title %>
-  </div>
-  <br>
+  </div><br>
+  <div>
+    <%= f.label :duration, "Duration:" %><br><br>
+    <%= f.number_field :duration %>
+  </div><br>
   <%= f.submit "Submit" %>
 <% end %>
