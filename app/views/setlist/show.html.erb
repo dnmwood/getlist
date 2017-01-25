@@ -4,27 +4,27 @@
     <meta charset="utf-8">
   </head>
 
+    <!-- Data submission -->
   <body>
     <h1><%= @setlist.title %></h1>
       <%= render 'song' %>
       <div class="container">
         <ul class="list">
           <% @setlist.songs.each do |x| %>
-          <%= x.title %><%= x.duration %>
-          <% end %>
-
-          <!-- Set Duration counter -->
-          <% total_duration = @setlist.songs.sum(:duration) %>
-          <% minutes = total_duration / 60 %>
-          <% seconds = total_duration - (minutes * 60) %>
-            <% if 9 >= seconds %>
-              <h2>Total Setlist Duration: <%= "#{minutes}:0#{seconds}" %></h2>
+            <% if x.seconds < 9 %>
+          <%= x.title %> <%= "#{x.minutes}:0#{x.seconds}" %>
             <% else %>
-              <h2>Total Setlist Duration: <%= "#{minutes}:#{seconds}" %></h2>
+          <%= x.title %> <%= "#{x.minutes}:#{x.seconds}" %><br><br>
             <% end %>
+          <% end %>
+          
+    <h2>Total Setlist duration:
+      <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
+      <%= "00:00" %>
+      <% else %>
+      <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %></h2>
+      <% end %>
         </ul>
       </div>
-        <!-- Song title: <input id="textInput" autocomplete="off" type="text" song="song" />
-        <button id="addButton">add song</button><br> -->
   </body>
 </html>

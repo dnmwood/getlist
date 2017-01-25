@@ -4,8 +4,12 @@
     <%= f.text_field :title %>
   </div><br>
   <div>
-    <%= f.label :duration, "Duration:" %><br><br>
-    <%= f.number_field :duration %>
+    <%= f.label :minutes, "Minutes:" %><br><br>
+    <%= f.number_field :minutes %>
+  </div><br>
+  <div>
+    <%= f.label :seconds, "Seconds:" %><br><br>
+    <%= f.number_field :seconds %>
   </div><br>
   <%= f.submit "Submit" %>
 <% end %>
