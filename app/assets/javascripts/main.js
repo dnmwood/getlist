@@ -19,12 +19,14 @@ $(document).ready(function($) {
     $.ajax({
       url: $(this).attr("action"),
       method: "POST",
-      data: $(this).serialize()
+      data: $('#song_title, #song_duration').serialize(),
     }).done(function () {
-      var textInputVal = document.getElementById('song_title').value;
-      $('.list').append('<li>' + textInputVal + '</li>')
-      $('#song_title').val("");
+      var textInputTitle = document.getElementById('song_title').value;
+        $(textInputTitle).appendTo('.list')
+        $('#song_title').val("");
+      var textInputDur = document.getElementById('song_duration').value;
+        $(textInputDur).appendTo('.number_list')
+        $('#song_duration').val("");
     });
   });
-
 });
