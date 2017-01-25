@@ -7,14 +7,17 @@ $(document).ready(function($) {
     $.ajax({
       url: $(this).attr("action"),
       method: "POST",
-      data: $('#song_title, #song_duration').serialize(),
+      data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function () {
       var textInputTitle = document.getElementById('song_title').value;
         $(textInputTitle).appendTo('.list')
         $('#song_title').val("");
-      var textInputDur = document.getElementById('song_duration').value;
-        $(textInputDur).appendTo('.number_list')
-        $('#song_duration').val("");
+      var textInputMin = document.getElementById('song_minutes').value;
+        $(textInputMin).appendTo('.number_list')
+        $('#song_minutes').val("");
+      var textInputSec = document.getElementById('song_seconds').value;
+        $(textInputSec).appendTo('.number_list')
+        $('#song_seconds').val("");
     });
   });
 });
