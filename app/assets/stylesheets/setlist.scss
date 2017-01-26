@@ -1,15 +1,21 @@
 // Place all the styles related to the setlist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  max-height: 100%;
+}
+
 h1, h2 {
   font-family: courier;
   text-align: center;
 }
 
-li {
-  list-style: none;
-  text-align: center;
-  display: block;
+table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  display: relative;
 }
 
 .list {
@@ -22,4 +28,12 @@ body {
   font-family: courier;
   text-align: center;
   background-image: url("http://oi64.tinypic.com/2d849hs.jpg");
+}
+
+.song-duration {
+  text-align: right;
+}
+
+footer {
+  font-size: 10px;
 }
