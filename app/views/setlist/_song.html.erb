@@ -1,7 +1,7 @@
 <%= form_for [@setlist, Song.new] do |f| %>
   <div>
     <%= f.label :title, "Song title:" %><br><br>
-    <%= f.text_field :title,  :maxlength => 28 %>
+    <%= f.text_field :title, :maxlength => 28 %>
   </div><br>
   <div>
     <%= f.label :minutes, "Minutes:" %><br><br>
