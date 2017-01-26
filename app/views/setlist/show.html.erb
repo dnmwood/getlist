@@ -13,7 +13,7 @@
 
 
           <% @setlist.songs.each do |x| %>
-            <tr><% if x.seconds < 9 %>
+            <tr><% if x.seconds < 10 %>
 
               <td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td></tr>
             <% else %>
