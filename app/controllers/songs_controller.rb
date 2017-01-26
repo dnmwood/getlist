@@ -12,13 +12,19 @@ class SongsController < ApplicationController
   end
 
   def update
-    @setlist = Setlist.find(params[:id])
+    @setlist = Setlist.song.find(params[:id])
 
-    if @setlist.update_attributes(setlist_params)
+    if @song.update_attributes(song_params)
       redirect_to setlist_url(@setlist)
     else
       render :edit
     end
+  end
+
+  def delete
+    @song = @setlist.song.find(params[:id]).destroy
+    flash[:success] = "song deleted"
+    redirect_to setlist_url(@setlist)
   end
 
 
