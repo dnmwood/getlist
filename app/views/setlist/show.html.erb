@@ -9,22 +9,27 @@
     <h1><%= @setlist.title %></h1>
       <%= render 'song' %>
       <div class="container">
-        <ul class="list">
+          <table>
+
+
           <% @setlist.songs.each do |x| %>
-            <% if x.seconds < 9 %>
-          <%= x.title %> <%= "#{x.minutes}:0#{x.seconds}" %>
+            <tr><% if x.seconds < 9 %>
+
+              <td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td></tr>
             <% else %>
-          <%= x.title %> <%= "#{x.minutes}:#{x.seconds}" %><br><br>
+            <tr><td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td></tr>
             <% end %>
           <% end %>
-          
+
+          </table>
+
     <h2>Total Setlist duration:
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
       <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %></h2>
       <% end %>
-        </ul>
+
       </div>
   </body>
 </html>
