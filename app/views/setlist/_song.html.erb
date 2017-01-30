@@ -5,7 +5,7 @@
   </div><br>
   <div>
     <%= f.label :minutes, "Minutes:" %><br><br>
-    <%= f.number_field :minutes, :value => 0, :min => 0 %>
+    <%= f.number_field :minutes, :value => 0, :min => 0, :max => 1000 %>
   </div><br>
   <div>
     <%= f.label :seconds, "Seconds:" %><br><br>
