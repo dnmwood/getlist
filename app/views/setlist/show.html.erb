@@ -7,17 +7,16 @@
     <!-- Data submission -->
   <body>
     <h1><%= @setlist.title %></h1>
+    <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= render 'song' %><br>
       <div class="container">
           <table>
 
-
           <% @setlist.songs.each do |x| %>
             <tr><% if x.seconds < 10 %>
-
               <td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td></tr>
             <% else %>
-            <tr><td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td></tr>
+              <tr><td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td></tr>
             <% end %>
           <% end %>
 

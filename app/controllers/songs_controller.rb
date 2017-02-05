@@ -21,13 +21,6 @@ class SongsController < ApplicationController
     end
   end
 
-  def delete
-    @song = @setlist.song.find(params[:id]).destroy
-    flash[:success] = "song deleted"
-    redirect_to setlist_url(@setlist)
-  end
-
-
   def new
     @song = Song.new
   end

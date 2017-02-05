@@ -32,6 +32,13 @@ class SetlistController < ApplicationController
     @setlist.save
   end
 
+  def destroy
+    @setlist = Setlist.find(params[:id]).delete
+      if @setlist.delete
+    redirect_to new_setlist_url
+  end
+end
+
   private
 
   def setlist_params
