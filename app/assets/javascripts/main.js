@@ -11,13 +11,27 @@ $(document).ready(function($) {
     }).done(function () {
       var textInputTitle = document.getElementById('song_title').value;
         $(textInputTitle).appendTo('.list')
-        $('#song_title').val("");
+          $('#song_title').val("");
       var textInputMin = document.getElementById('song_minutes').value;
         $(textInputMin).appendTo('.number_list')
-        $('#song_minutes').val("");
+          $('#song_minutes').val("");
       var textInputSec = document.getElementById('song_seconds').value;
         $(textInputSec).appendTo('.number_list')
-        $('#song_seconds').val("");
+          $('#song_seconds').val("");
+    });
+  });
+});
+
+$(document).ready(function($) {
+  $(".delete-song").on('click', function(event) {
+    event.preventDefault();
+    console.log("hello");
+    $.ajax({
+      url: $(this).attr("action"),
+      method: "DELETE",
+        data: $('#song_title, #song_minutes, #song_seconds').serialize(),
+    }).done(function() {
+      $('#song-title, #song-duration').remove();
     });
   });
 });

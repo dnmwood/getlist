@@ -7,28 +7,28 @@
     <!-- Data submission -->
   <body>
     <h1><%= @setlist.title %></h1>
-    <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= render 'song' %><br>
       <div class="container">
           <table>
 
           <% @setlist.songs.each do |x| %>
             <tr><% if x.seconds < 10 %>
-              <td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td></tr>
+              <td class="song-title"><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %><button type="button" class="delete-song" name="button">x</button></td></tr>
             <% else %>
-              <tr><td><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td></tr>
+              <td class="song-title"><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %><button type="button" class="delete-song" name="button">x</button></td></tr>
             <% end %>
           <% end %>
 
           </table>
 
+      <!-- Setlist DUration -->
     <h2>Total Setlist duration:
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
       <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %></h2>
       <% end %>
-
+      <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
   </body>
 </html>
