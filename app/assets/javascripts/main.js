@@ -1,6 +1,3 @@
-$(document).ready(function () {
-});
-
 $(document).ready(function($) {
   $("#new_song").on('submit', function(event) {
     event.preventDefault();
@@ -25,16 +22,18 @@ $(document).ready(function($) {
 $(document).ready(function($) {
   $(".delete-song").on('click', function(event) {
     event.preventDefault();
-    console.log("hello");
+    var theButton = $(this)
     $.ajax({
-      url: $(this).attr("action"),
+      url: window.location + '/songs/' +  $(this).attr('id'),
       method: "DELETE",
         data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function() {
-      $('#song-title, #song-duration').remove();
+      console.log(theButton, theButton.parent());
+      theButton.closest("tr").remove();
     });
   });
 });
+
 
 // $(function() {
 //   $('#addButton').on('click', function(e) {

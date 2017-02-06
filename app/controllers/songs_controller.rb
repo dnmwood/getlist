@@ -1,6 +1,10 @@
 class SongsController < ApplicationController
   before_action :set_setlist
 
+  def index
+    @songs = Song.all
+  end
+
   def create
     @song = @setlist.songs.create(song_params)
 
@@ -23,6 +27,11 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+  end
+
+  def destroy
+    @song = Song.find(params[:id])
+    @song.destroy
   end
 
   private

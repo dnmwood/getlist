@@ -12,10 +12,21 @@
           <table>
 
           <% @setlist.songs.each do |x| %>
-            <tr><% if x.seconds < 10 %>
-              <td class="song-title"><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %><button type="button" class="delete-song" name="button">x</button></td></tr>
+            <tr id="<%= x.id %>">
+              <% if x.seconds < 10 %>
+              <td class="song-title"><%= x.title %></td>
+              <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>
+              <td>
+                <button type="button" class="delete-song" id="<%= x.id %>">x</button>
+              </td>
+            </tr>
             <% else %>
-              <td class="song-title"><%= x.title %></td> <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %><button type="button" class="delete-song" name="button">x</button></td></tr>
+              <td class="song-title"><%= x.title %></td>
+              <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td>
+              <td>
+                <button type="button" class="delete-song" id="<%= x.id %>">x</button>
+              </td>
+            </tr>
             <% end %>
           <% end %>
 
