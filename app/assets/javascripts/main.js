@@ -15,6 +15,7 @@ $(document).ready(function($) {
       var textInputSec = document.getElementById('song_seconds').value;
         $(textInputSec).appendTo('.number_list')
           $('#song_seconds').val("");
+      location.reload();
     });
   });
 });
