@@ -20,9 +20,8 @@ $(document).ready(function($) {
   });
 });
 
-//loading turbolinks in order to have the page li
+//loading turbolinks in order to have the page recognize new event listeners
 $(document).on('turbolinks:load', function() {
-
   $(".song-table").on('click', 'button', function() {
 
     var theButton = $(this)
@@ -33,7 +32,6 @@ $(document).on('turbolinks:load', function() {
       method: "DELETE",
         data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function() {
-
       row.remove();
     });
   });
