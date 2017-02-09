@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+
   $("#new_song").on('submit', function(event) {
     event.preventDefault();
     $.ajax({
@@ -15,22 +16,25 @@ $(document).ready(function($) {
       var textInputSec = document.getElementById('song_seconds').value;
         $(textInputSec).appendTo('.number_list')
           $('#song_seconds').val("");
-      location.reload();
     });
   });
 });
 
-$(document).ready(function($) {
-  $(".delete-song").on('click', function(event) {
-    event.preventDefault();
+//loading turbolinks in order to have the page li
+$(document).on('turbolinks:load', function() {
+
+  $(".song-table").on('click', 'button', function() {
+
     var theButton = $(this)
+    var row = theButton.closest('tr')
+
     $.ajax({
       url: window.location + '/songs/' +  $(this).attr('id'),
       method: "DELETE",
         data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function() {
-      theButton.closest("tr").remove();
-      location.reload();
+
+      row.remove();
     });
   });
 });

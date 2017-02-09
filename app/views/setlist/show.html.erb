@@ -9,10 +9,10 @@
     <h1><%= @setlist.title %></h1>
       <%= render 'song' %><br>
       <div class="container">
-          <table>
+          <table class="song-table">
 
           <% @setlist.songs.each do |x| %>
-            <tr id="<%= x.id %>" draggable="true">
+            <tr id="<%= x.id %>">
               <% if x.seconds < 10 %>
               <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>
