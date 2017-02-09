@@ -12,7 +12,7 @@
           <table>
 
           <% @setlist.songs.each do |x| %>
-            <tr id="<%= x.id %>">
+            <tr id="<%= x.id %>" draggable="true">
               <% if x.seconds < 10 %>
               <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>

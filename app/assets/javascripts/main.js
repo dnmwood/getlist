@@ -33,16 +33,17 @@ $(document).ready(function($) {
     });
   });
 });
-
-
-// $(function() {
-//   $('#addButton').on('click', function(e) {
-//     e.preventDefault();
-//     var textInputVal = document.getElementById('textInput').value;
-//     // var s = ( '#list' ).append( textInputVal );
-//     $( '.list' ).append('<li>' + textInputVal + '</li>')
-//     $('#textInput').val("");
-//     // console.log($( '.list' ))
-//     // $('textInputVal').appendTo('list')
-//   });
-// });
+//
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
+//
+// function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
+//
+// function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+// }
