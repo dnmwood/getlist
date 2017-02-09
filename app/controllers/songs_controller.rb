@@ -31,9 +31,7 @@ class SongsController < ApplicationController
 
   def destroy
     @song = Song.find(params[:id])
-
     if @song.destroy
-      flash[:notice] = "song destroyed."
       redirect_to @setlist
     else
       flash[:error] = "There was an error completing the item."

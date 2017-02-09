@@ -28,11 +28,12 @@ $(document).ready(function($) {
       method: "DELETE",
         data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function() {
-      console.log(theButton, theButton.parent());
       theButton.closest("tr").remove();
+      location.reload();
     });
   });
 });
+
 //
 // function allowDrop(ev) {
 //     ev.preventDefault();
