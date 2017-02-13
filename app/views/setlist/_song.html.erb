@@ -5,11 +5,11 @@
   </div><br>
   <div>
     <%= f.label :minutes, "Minutes:" %><br><br>
-    <%= f.number_field :minutes, :value => 0, :min => 0, :max => 1000, :class => "NumInputField" %>
+    <%= f.number_field :minutes, :min => 0, :max => 1000, :class => "minField", :placeholder => "m" %>
   </div><br>
   <div>
     <%= f.label :seconds, "Seconds:" %><br><br>
-    <%= f.number_field :seconds, :value => 0, :min => 0, :max => 59, :class => "NumInputField" %>
+    <%= f.number_field :seconds, :min => 0, :max => 59, :class => "secField", :placeholder => "s" %>
   </div><br>
   <%= f.submit "add song", :class => "submitButton" %>
 <% end %>

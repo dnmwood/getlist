@@ -6,7 +6,7 @@
 
     <!-- Data submission -->
   <body>
-    <h1><%= @setlist.title %></h1>
+    <h1 class="header"><%= @setlist.title %></h1>
       <%= render 'song' %><br>
       <div class="container">
           <table class="song-table">
@@ -33,7 +33,7 @@
           </table>
 
       <!-- Setlist DUration -->
-    <h2>Total Setlist duration:
+    <h2 class="total-duration">Total Setlist duration:
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
