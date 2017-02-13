@@ -1,15 +1,15 @@
 <%= form_for [@setlist, Song.new] do |f| %>
   <div>
     <%= f.label :title, "Song title:" %><br><br>
-    <%= f.text_field :title, :maxlength => 28 %>
+    <%= f.text_field :title, :maxlength => 28, :class => "TextInputField", :placeholder => "..." %>
   </div><br>
   <div>
     <%= f.label :minutes, "Minutes:" %><br><br>
-    <%= f.number_field :minutes, :value => 0, :min => 0, :max => 1000 %>
+    <%= f.number_field :minutes, :value => 0, :min => 0, :max => 1000, :class => "NumInputField" %>
   </div><br>
   <div>
     <%= f.label :seconds, "Seconds:" %><br><br>
-    <%= f.number_field :seconds, :value => 0, :min => 0, :max => 59 %>
+    <%= f.number_field :seconds, :value => 0, :min => 0, :max => 59, :class => "NumInputField" %>
   </div><br>
-  <%= f.submit "Submit" %>
+  <%= f.submit "add song", :class => "submitButton" %>
 <% end %>

@@ -1,5 +1,6 @@
 $(document).ready(function($) {
 
+  //Your "POST" ajax request for setlist songs
   $("#new_song").on('submit', function(event) {
     event.preventDefault();
     $.ajax({
@@ -28,7 +29,7 @@ $(document).on('turbolinks:load', function() {
     var row = theButton.closest('tr')
 
     $.ajax({
-      url: window.location + '/songs/' +  $(this).attr('id'),
+      url: window.location + '/songs/' + $(this).attr('id'),
       method: "DELETE",
         data: $('#song_title, #song_minutes, #song_seconds').serialize(),
     }).done(function() {

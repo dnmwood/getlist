@@ -36,7 +36,60 @@ body {
   width: 100%;
   font-family: courier;
   text-align: center;
+  background-color: #E2E2E2;
+  // background-image: url("http://4.bp.blogspot.com/-Svsup92kLgs/Uh9zYu6fL0I/AAAAAAAAHGM/V8lAXFemTRs/s1600/Photo-Background-Paper4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   // background-image: url("http://oi64.tinypic.com/2d849hs.jpg");
+  // background-image: url("http://pre14.deviantart.net/7f75/th/pre/i/2012/206/b/0/lined_paper_2_by_purpledragon42_stock-d58lmw7.png");
+}
+
+.TextInputField {
+  width: 100px;
+  height: 18px;
+  font-size: 11px;
+  text-indent: 5px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #494949;
+}
+
+.NumInputField {
+  width: 40px;
+  height: 18px;
+  font-size: 10px;
+  text-indent: 5px;
+  border: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: #494949;
+}
+
+.submitButton {
+padding: 10px 20px 11px !important;
+font-size: 13px !important;
+background-color: #8185F7;
+font-weight: bold;
+text-shadow: 1px 1px #8185F7;
+color: #ffffff;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #8185F7;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.delete-song {
+color: white;
+background-color: #F85E5E;
+border-radius: 50%;
+border: solid;
+border-width: 2px;
+border-color: #CC4B4B;
 }
 
 footer {
@@ -46,5 +99,5 @@ footer {
   left: 0;
   padding-bottom: 5px;
   font-size: 10px;
-
+  font-weight: bold;
 }
