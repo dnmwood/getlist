@@ -25,8 +25,8 @@ background-color: #EAEAEA;
   font-family: sans-serif;
   background: linear-gradient(#0260A4, #006BB6, #0260A4);
   box-shadow: 0px 1px 5px 0px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
   margin: 0px auto;
 }
 
@@ -48,6 +48,8 @@ h1 {
 }
 
 .song-table {
+  background-color: #D5D5D5;
+  border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
@@ -55,6 +57,7 @@ h1 {
 }
 
 .song-title {
+  padding-left: 5px;
   padding-right: 15px;
 }
 
@@ -76,10 +79,10 @@ h1 {
 
 .InputField {
   float: left;
-  margin-left: 237px;
+  margin-left: 10px;
   padding: 5px;
-  width: 160px;
-  height: 28px;
+  width: 80px;
+  height: 20px;
   text-indent: 5px;
   font-size: 13px;
   text-size: 13px;
@@ -94,8 +97,9 @@ h1 {
   float: left;
   // margin: 5px;
   padding: 5px;
-  width: 40px;
-  height: 28px;
+  margin-right: -5px;
+  width: 34px;
+  height: 20px;
   text-indent: 5px;
   font-size: 13px;
   text-size:13px;
@@ -108,10 +112,10 @@ h1 {
 
 .SecInputField {
   float:left;
-  // margin: 5px;
+  margin-left: -1px;
   padding: 5px;
   width: 40px;
-  height: 28px;
+  height: 20px;
   text-indent: 5px;
   font-size: 13px;
   text-size:13px;
@@ -132,8 +136,8 @@ h1 {
   border-bottom-right-radius: 6px;
   margin-top: -26px;
   margin-bottom: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 13px;
 }
 
 
@@ -143,7 +147,7 @@ h1 {
 //delete-song
 
 .fa {
-  background: #EAEAEA;
+  background: #D5D5D5;
   border: none;
   opacity: 0.5;
   padding-left: 25px;
@@ -156,14 +160,33 @@ h1 {
 }
 
 .submitButton {
+//   padding: 10px 20px 11px !important;
+//   font-size: 13px !important;
+//   background-color: #DC6ADA;
+  font-weight: bold;
+//   text-shadow: 1px 1px #DC6ADA;
+//   color: #ffffff;
+  margin-top: 6px;
+  // margin-left: 0px;
+  border-radius: 100px;
+//   -moz-border-radius: 100px;
+//   -webkit-border-radius: 100px;
+//   border: 1px solid #DC6ADA;
+//   cursor: pointer;
+//   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+//   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+//   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.create {
   padding: 10px 20px 11px !important;
   font-size: 13px !important;
   background-color: #DC6ADA;
   font-weight: bold;
   text-shadow: 1px 1px #DC6ADA;
   color: #ffffff;
-  margin-top: 1.3px;
-  margin-left: -200px;
+  // margin-top: 10px;
+  // margin-bottom: 17px;
   border-radius: 100px;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -174,28 +197,13 @@ h1 {
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
-.create {
-  padding: 10px 20px 11px !important;
-  font-size: 13px !important;
-  background-color: #8185F7;
-  font-weight: bold;
-  text-shadow: 1px 1px #8185F7;
-  color: #ffffff;
-  // margin-top: 10px;
-  // margin-bottom: 17px;
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  border: 1px solid #8185F7;
-  cursor: pointer;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+.footer {
+  bottom: 0;
+  position: fixed;
 }
 
-.total-duration {
-  padding: 10px;
-  margin-top: 25px;
+.del-setlist {
+  font-size: 100px;
 }
 
 // footer {

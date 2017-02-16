@@ -36,14 +36,14 @@
           </table>
 
       <!-- Setlist Duration -->
-    <h2 class="footer">total setlist duration:
+    <footer class="footer">total setlist duration:
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
-      <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %></h2>
+      <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %>
       <% end %>
       <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+      </div></footer>
     </div>
   </body>
 </html>
