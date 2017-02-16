@@ -6,9 +6,12 @@
 
     <!-- Data submission -->
   <body>
-    <h1 class="header"><%= @setlist.title %></h1>
-      <%= render 'song' %><br>
-      <div class="container">
+    <div class="header-cont">
+      <div class="header">
+        <h1><%= @setlist.title %></h1></div>
+
+      <div class="content">
+        <%= render 'song' %><br>
           <table class="song-table">
 
           <% @setlist.songs.each do |x| %>
@@ -41,5 +44,6 @@
       <% end %>
       <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
+    </div>
   </body>
 </html>
