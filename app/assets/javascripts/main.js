@@ -23,7 +23,7 @@ $(document).ready(function($) {
 
 //loading turbolinks in order to have the page recognize new event listeners
 $(document).on('turbolinks:load', function() {
-  $(".song-table").on('click', 'button', function() {
+  $( ".song-table" ).on('click', 'button', function() {
 
     var theButton = $(this)
     var row = theButton.closest('tr')
@@ -38,17 +38,6 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
-//
-// function allowDrop(ev) {
-//     ev.preventDefault();
-// }
-//
-// function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
-//
-// function drop(ev) {
-//     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-// }
+$( ".fa" ).hover(function () {
+   $( ".fa" ).toggleClass("on_hover");
+});

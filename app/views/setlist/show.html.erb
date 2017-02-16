@@ -20,14 +20,14 @@
               <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>
               <td>
-                <button type="button" class="delete-song" id="<%= x.id %>">x</button>
+                <button type="button" class="delete-song" id="<%= x.id %>">x</button><i class="fa fa-times" aria-hidden="true"></i>
               </td>
             </tr>
             <% else %>
               <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td>
               <td>
-                <button type="button" class="delete-song" id="<%= x.id %>">x</button>
+                <button type="button" i class="fa fa-times" aria-hidden="true" id="<%= x.id %>"></button>
               </td>
             </tr>
             <% end %>

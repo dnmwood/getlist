@@ -1,14 +1,19 @@
 // Place all the styles related to the setlist controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+*= require font-awesome
+*/
+
 html {
-// background-image: url('/assets/nickface1bg.jpeg'); 
 background-repeat: no-repeat;
 background-size: 150%;
 background-image-opacity: 0.5;
 background-color: #EAEAEA;
 }
 
+//Header & Content
 
 .header-cont { width: 100%; position: fixed; top: 0px; left: -2px; }
 
@@ -27,6 +32,7 @@ background-color: #EAEAEA;
 
 h1 {
   color: white;
+  text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
 }
 
 .content {
@@ -81,6 +87,21 @@ table {
   border-color: #494949;
 }
 
+// Delete button HOVER
+
+
+.fa {
+  background: #EAEAEA;
+  border: none;
+  opacity: 0.5;
+  padding: 0;
+}
+
+.fa:hover {
+  opacity: 1.0;
+  cursor: pointer;
+}
+
 .secField {
   height: 18px;
   width: 40px;
@@ -109,16 +130,6 @@ table {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-}
-
-.delete-song {
-  color: white;
-  background-color: #F85E5E;
-  border-radius: 50%;
-  border: solid;
-  border-width: 2px;
-  border-color: #CC4B4B;
-  margin-left: 5px;
 }
 
 .total-duration {
