@@ -1,8 +1,8 @@
 <%= form_for @setlist do |f| %>
   <div>
     <%= f.label :title, "Setlist Title:" %><br><br>
-    <%= f.text_field :title, :class => "TextInputField", :placeholder => "..." %>
+    <%= f.text_field :title, :class => "inputField", :placeholder => "..." %>
   </div>
   <br>
-  <%= f.submit "Create", :class => "submitButton"%>
+  <%= f.submit "Create", :class => "create"%>
 <% end %>

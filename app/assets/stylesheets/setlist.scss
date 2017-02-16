@@ -36,92 +36,153 @@ h1 {
 }
 
 .content {
-  width: 500px;
-  height: 960px;
+  text-align: center;
+  width: 80%;
+  height: auto;
   margin: 2px auto;
   padding-top: 25px;
-  align-self: center;
-  text-align: center;
   font-family: sans-serif;
   font-size: 17px;
   // box-shadow: 0px 1px 3px 0px;
   // background-color: #EAEAEA;
 }
 
-table {
+.song-table {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   display: relative;
 }
 
+.song-title {
+  padding-right: 15px;
+}
+
 .song-duration {
+  margin: auto;
   text-align: right;
 }
 
 .list {
+  padding: 10px;
+  margin-top: 40px;
   list-style: none;
   text-align: center;
-  display: block;
 }
 
-.TextInputField {
-  width: 100px;
-  height: 18px;
-  font-size: 11px;
+
+//SONG INPUT FIELDS
+
+
+.InputField {
+  float: left;
+  margin-left: 237px;
+  padding: 5px;
+  width: 160px;
+  height: 28px;
   text-indent: 5px;
+  font-size: 13px;
+  text-size: 13px;
   border: solid;
   border-width: 2px;
-  border-radius: 5px;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
   border-color: #494949;
 }
 
-.minField {
-  height: 18px;
+.MinInputField {
+  float: left;
+  // margin: 5px;
+  padding: 5px;
   width: 40px;
-  font-size: 10px;
+  height: 28px;
   text-indent: 5px;
+  font-size: 13px;
+  text-size:13px;
   border: solid;
+  border-left: 0px;
+  border-right: 0px;
   border-width: 2px;
-  border-radius: 5px;
   border-color: #494949;
 }
 
-// Delete button HOVER
+.SecInputField {
+  float:left;
+  // margin: 5px;
+  padding: 5px;
+  width: 40px;
+  height: 28px;
+  text-indent: 5px;
+  font-size: 13px;
+  text-size:13px;
+  border: solid;
+  border-left: 0px;
+  border-width: 2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-color: #494949;
+}
 
+.new_song {
+  background-color: #B6B6B6;
+  border: solid;
+  border-color: #4D4D4D;
+  border-top: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-top: -26px;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+// BUTTONS - Delete button (.fa) (HOVER) and SUBMIT
+
+
+//delete-song
 
 .fa {
   background: #EAEAEA;
   border: none;
   opacity: 0.5;
-  padding: 0;
+  padding-left: 25px;
 }
 
 .fa:hover {
   opacity: 1.0;
   cursor: pointer;
-}
-
-.secField {
-  height: 18px;
-  width: 40px;
-  font-size: 10px;
-  text-indent: 5px;
-  border: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  border-color: #494949;
+  transform: scale(1.1);
 }
 
 .submitButton {
+  padding: 10px 20px 11px !important;
+  font-size: 13px !important;
+  background-color: #DC6ADA;
+  font-weight: bold;
+  text-shadow: 1px 1px #DC6ADA;
+  color: #ffffff;
+  margin-top: 1.3px;
+  margin-left: -200px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: 1px solid #DC6ADA;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
+
+.create {
   padding: 10px 20px 11px !important;
   font-size: 13px !important;
   background-color: #8185F7;
   font-weight: bold;
   text-shadow: 1px 1px #8185F7;
   color: #ffffff;
-  margin-top: 10px;
-  margin-bottom: 17px;
+  // margin-top: 10px;
+  // margin-bottom: 17px;
   border-radius: 100px;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -133,16 +194,17 @@ table {
 }
 
 .total-duration {
+  padding: 10px;
   margin-top: 25px;
 }
 
-footer {
-  position: absolute;
-  text-align: center;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding-bottom: 5px;
-  font-size: 10px;
-  font-weight: bold;
-}
+// footer {
+//   position: absolute;
+//   text-align: center;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   padding-bottom: 5px;
+//   font-size: 10px;
+//   font-weight: bold;
+// }

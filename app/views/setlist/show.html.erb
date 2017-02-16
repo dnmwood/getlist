@@ -11,7 +11,7 @@
         <h1><%= @setlist.title %></h1></div>
 
       <div class="content">
-        <%= render 'song' %><br>
+        <%= render 'song' %>
           <table class="song-table">
 
           <% @setlist.songs.each do |x| %>
@@ -20,7 +20,7 @@
               <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>
               <td>
-                <button type="button" class="delete-song" id="<%= x.id %>">x</button><i class="fa fa-times" aria-hidden="true"></i>
+                <button type="button" i class="fa fa-times" aria-hidden="true" id="<%= x.id %>"></button>
               </td>
             </tr>
             <% else %>
@@ -35,8 +35,8 @@
 
           </table>
 
-      <!-- Setlist DUration -->
-    <h2 class="total-duration">Total Setlist duration:
+      <!-- Setlist Duration -->
+    <h2 class="footer">total setlist duration:
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
