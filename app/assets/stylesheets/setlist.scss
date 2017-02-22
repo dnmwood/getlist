@@ -15,8 +15,8 @@ html {
 .header-cont { width: 100%; position: fixed; top: 0px; left: -2px; }
 
 .header {
-  padding: 2px;
-  height: 80px;
+  height: auto;
+  padding-bottom: 15px;
   width: 100%;
   text-align: center;
   font-family: sans-serif;
@@ -28,6 +28,10 @@ html {
 }
 
 h1 {
+  margin: auto;
+  padding-top: 16px;
+  align-items: center;
+  font-size: 30px;
   color: white;
   text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
 }
