@@ -7,10 +7,7 @@
 */
 
 html {
-background-repeat: no-repeat;
-background-size: 150%;
-background-image-opacity: 0.5;
-background-color: #EAEAEA;
+  background-color: #393939;
 }
 
 //Header & Content
@@ -37,7 +34,6 @@ h1 {
 
 .content {
   text-align: center;
-  width: 80%;
   height: auto;
   margin: 2px auto;
   padding-top: 25px;
@@ -46,6 +42,7 @@ h1 {
   // box-shadow: 0px 1px 3px 0px;
   // background-color: #EAEAEA;
 }
+
 
 .song-table {
   background-color: #D5D5D5;
@@ -73,6 +70,11 @@ h1 {
   text-align: center;
 }
 
+.setlist-label {
+  font-size: 20px;
+  color: white;
+  text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
+}
 
 //SONG INPUT FIELDS
 
@@ -128,9 +130,12 @@ h1 {
 }
 
 .new_song {
+  flex-wrap: center;
+  align-items: center;
   background-color: #B6B6B6;
   border: solid;
-  border-color: #4D4D4D;
+  border-color: #E7E7E7;
+  border-style: outset;
   border-top: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
@@ -139,7 +144,6 @@ h1 {
   padding-top: 7px;
   padding-bottom: 13px;
 }
-
 
 // BUTTONS - Delete button (.fa) (HOVER) and SUBMIT
 
@@ -181,38 +185,51 @@ h1 {
 .create {
   padding: 10px 20px 11px !important;
   font-size: 13px !important;
-  background-color: #DC6ADA;
+  background-color: #006BB6;
   font-weight: bold;
-  text-shadow: 1px 1px #DC6ADA;
+  text-shadow: 1px 1px #006BB6;
   color: #ffffff;
   // margin-top: 10px;
   // margin-bottom: 17px;
   border-radius: 100px;
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
-  border: 1px solid #DC6ADA;
+  border: 1px solid #006BB6;
   cursor: pointer;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
 }
 
+//bottom footer
+
 .footer {
-  bottom: 0;
   position: fixed;
+  // text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
+  padding-top: 7px;
+  border: solid;
+  background-color: #B6B6B6;
+  border-color: #E7E7E7;
+  margin-bottom: -3px;
+  bottom: 0;
+  text-align: center;
+  font-size: 21px;
+  width: 100%;
+}
+
+.total-duration {
+  margin: auto;
+  color: white;
+  text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
 }
 
 .del-setlist {
-  font-size: 100px;
+  font-size: 14px;
+  text-decoration: none;
+  margin: auto;
+  padding-bottom: 9px;
 }
 
-// footer {
-//   position: absolute;
-//   text-align: center;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   padding-bottom: 5px;
-//   font-size: 10px;
-//   font-weight: bold;
-// }
+p {
+  margin: 6px;
+}

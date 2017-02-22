@@ -1,6 +1,6 @@
 <%= form_for @setlist do |f| %>
   <div>
-    <%= f.label :title, "Setlist Title:" %><br><br>
+    <%= f.label :title, "Setlist Title:", :class => "setlist-label"%><br><br>
     <%= f.text_field :title, :class => "inputField", :placeholder => "..." %>
   </div>
   <br>

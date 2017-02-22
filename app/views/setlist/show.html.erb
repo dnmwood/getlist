@@ -15,35 +15,32 @@
           <table class="song-table">
 
           <% @setlist.songs.each do |x| %>
+
+
             <tr id="<%= x.id %>">
+              <td class="song-title"><%= x.title %></td>
               <% if x.seconds < 10 %>
-              <td class="song-title"><%= x.title %></td>
               <td class="song-duration"><%= "#{x.minutes}:0#{x.seconds}" %></td>
-              <td>
-                <button type="button" i class="fa fa-times" aria-hidden="true" id="<%= x.id %>"></button>
-              </td>
-            </tr>
-            <% else %>
-              <td class="song-title"><%= x.title %></td>
+              <% else %>
               <td class="song-duration"><%= "#{x.minutes}:#{x.seconds}" %></td>
+              <% end %>
+
               <td>
                 <button type="button" i class="fa fa-times" aria-hidden="true" id="<%= x.id %>"></button>
               </td>
             </tr>
-            <% end %>
           <% end %>
 
           </table>
 
       <!-- Setlist Duration -->
-    <footer class="footer">total setlist duration:
+      <div class="footer"><p class="total-duration">total setlist duration:<p>
       <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
       <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %>
       <% end %>
-      <%= link_to 'delete setlist', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div></footer>
+      <div class ="del-setlist"><%= link_to 'delete', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete-sl" %></div>
     </div>
   </body>
 </html>

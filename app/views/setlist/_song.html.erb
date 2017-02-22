@@ -3,10 +3,10 @@
     <%= f.text_field :title, :maxlength => 28, :class => "InputField", :placeholder => "Song title" %>
   </div>
   <div>
-    <%= f.number_field :minutes, :min => 0, :max => 1000, :class => "MinInputField", :placeholder => "min" %>
+    <%= f.number_field :minutes, :min => 0, :max => 1000, :placeholder => "min", :class => "MinInputField", :value => 0 %>
   </div>
   <div>
-    <%= f.number_field :seconds, :min => 0, :max => 59, :class => "SecInputField", :placeholder => "sec" %>
+    <%= f.number_field :seconds, :min => 0, :max => 59, :placeholder => "sec", :class => "SecInputField", :value => 0 %>
   </div>
   <%= f.submit "+", :class => "submitButton" %>
 <% end %>
