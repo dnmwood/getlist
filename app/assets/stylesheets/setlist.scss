@@ -132,6 +132,7 @@ h1 {
 
 .song-table {
   background-color: #E1E1E1;
+  background-color:rgba(242, 241, 241, 0.7);
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -157,9 +158,10 @@ h1 {
 }
 
 .setlist-label {
+  font-family: 'Mada', sans-serif;
   font-size: 20px;
-  color: white;
-  text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
+  color: black;
+  // text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
 }
 
 //SONG INPUT FIELDS
@@ -240,7 +242,7 @@ h1 {
 //delete-song
 
 .fa {
-  background: #E1E1E1;
+  background-color:rgba(242, 241, 241, 0.7);
   border: none;
   opacity: 0.5;
   padding-left: 25px;
