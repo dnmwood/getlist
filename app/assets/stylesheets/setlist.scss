@@ -6,16 +6,16 @@
 *= require font-awesome
 */
 
-@media only screen and (min-width: 415px) {
-    html {
-      background-image: url('http://oi65.tinypic.com/2corjwg.jpg');
-      background-size: 100%;
-      background-repeat: no-repeat;
-      margin: auto;
-      margin-top: 15%;
-      margin-right: 39px;
-    }
-  }
+// @media only screen and (min-width: 415px) {
+//     html {
+//       background-image: url('http://oi65.tinypic.com/2corjwg.jpg');
+//       background-size: 100%;
+//       background-repeat: no-repeat;
+//       margin: auto;
+//       margin-top: 15%;
+//       margin-right: 39px;
+//     }
+//   }
 
 @media only screen and (min-width: 415px) {
     .new_song {
@@ -62,7 +62,13 @@
   }
 
 html {
-  background-color: white;
+  // background-color: white;
+  background-image: url('/assets/amp1.png');
+  background-repeat: no-repeat;
+  background-size: 240px;
+  margin-top: 310px;
+  margin-left: 10%;
+
   // background-image: url('/assets/getlist_amp1.jpg');
   // background-size: 50%;
   // background-repeat: no-repeat;
@@ -73,7 +79,7 @@ html {
 }
 
 body {
-
+  background-image: url('/assets/amp1.png');
 }
 
 .header, .content, h1, .song-table, .footer {
@@ -294,7 +300,7 @@ h1 {
   // border: solid;
   // background-color: #B6B6B6;
   // border-color: #006BB6;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
   bottom: 0;
   text-align: center;
   font-size: 19px;
@@ -325,9 +331,8 @@ p {
   // border: solid;
   // background-color: #B6B6B6;
   // border-color: #006BB6;
-  margin-bottom: 76px;
+  margin-bottom: 106px;
   bottom: 0;
   text-align: center;
-  font-size: 19px;
   width: 100%;
 }
