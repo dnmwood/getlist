@@ -55,10 +55,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: bottom;
-  background-size: 240px;
-  margin-top: 412px;
-  margin-left: 230px;
-  background-size: 230px;
+  background-size: 210px;
 }
 
 body {
@@ -178,7 +175,6 @@ h2 {
 
 .MinInputField {
   float: left;
-  // margin: 5px;
   padding: 5px;
   margin: auto;
   margin-right: -5px;
@@ -197,7 +193,6 @@ h2 {
 .SecInputField {
   float:left;
   margin: auto;
-  // margin-left: -4px;
   padding: 5px;
   width: 30px;
   height: 20px;
@@ -304,10 +299,13 @@ h2 {
 
 
 .del-setlist {
+  position: fixed;
   float: right;
+  bottom: 2px;
+  width: 100%;
+  margin: auto;
   font-size: 14px;
   text-decoration: none;
-  margin: auto;
   padding-right: 10px;
   padding-top: 10px;
 }

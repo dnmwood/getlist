@@ -8,7 +8,6 @@
   <body>
     <div class="header-cont">
       <div class="header-2">
-        <div class ="del-setlist"><%= link_to 'delete', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete-sl" %></div>
         <h2><%= @setlist.title %></h2></div>
       <div class="content">
         <%= render 'song' %>
@@ -40,6 +39,7 @@
       <% else %>
       <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %>
       <% end %></div>
+      <div class ="del-setlist"><%= link_to 'delete', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete-sl" %></div>
     </div>
   </body>
 </html>
