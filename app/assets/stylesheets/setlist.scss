@@ -38,7 +38,7 @@
 
 @media only screen and (min-width: 415px) {
     .song-table {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
 
@@ -65,11 +65,12 @@ html {
   // background-color: white;
   background-image: url('/assets/amp1.png');
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
   background-size: 240px;
-  margin-top: 310px;
-  margin-left: 10%;
-
-  // background-image: url('/assets/getlist_amp1.jpg');
+  margin-top: 412px;
+  margin-left: 230px;
+  background-size: 230px;
   // background-size: 50%;
   // background-repeat: no-repeat;
   // bottom: 0;
@@ -101,28 +102,53 @@ body {
   width: 100%;
   text-align: center;
   // font-family: sans-serif;
-  background: linear-gradient(#0260A4, #006BB6, #0260A4);
-  box-shadow: 0px 1px 5px 0px;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+  // background: linear-gradient(#0260A4, #006BB6, #0260A4);
+  // box-shadow: 0px 1px 5px 0px;
+  // border-bottom-left-radius: 7px;
+  // border-bottom-right-radius: 7px;
+  margin: 0px auto;
+}
+
+.header-2 {
+  // box-sizing: border-box;
+  height: auto;
+  padding-bottom: 15px;
+  width: 100%;
+  text-align: center;
+  // background: linear-gradient(#0260A4, #006BB6, #0260A4);
+  // box-shadow: 0px 1px 5px 0px;
+  // border-bottom-left-radius: 7px;
+  // border-bottom-right-radius: 7px;
   margin: 0px auto;
 }
 
 h1 {
+  font-family: 'Ubuntu', sans-serif;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 0px;
+  align-items: center;
+  font-size: 38px;
+  color: black;
+}
+
+h2 {
+  font-family: 'Ubuntu', sans-serif;
   margin: auto;
   padding-top: 16px;
   align-items: center;
+  font-size: 40px;
   // font-size: 38px;
   // max-font-size: 50px;
-  color: white;
-  text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
+  color: black;
+  // text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
 }
 
 .content {
   text-align: center;
   height: auto;
   margin: 2px auto;
-  padding-top: 25px;
+  padding-top: 15px;
   font-family: sans-serif;
   // font-size: 17px;
   // box-shadow: 0px 1px 3px 0px;
@@ -222,17 +248,19 @@ h1 {
 .new_song {
   flex-wrap: center;
   align-items: center;
-  background-color: #B6B6B6;
+  background-color: #006BB6;
   border: solid;
-  border-color: #E7E7E7;
-  border-style: outset;
-  border-top: 0;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-color: #262626;
+  border-style: solid;
+  border-width: 2px;
+    // border-top: 0;
+  border-radius: 6px;
+  // border-bottom-left-radius: 6px;
+  // border-bottom-right-radius: 6px;
   margin-top: -26px;
   margin-bottom: 40px;
-  padding-top: 7px;
-  padding-bottom: 13px;
+  padding-top: 8px;
+  padding-bottom: 12px;
   padding-left: 20px;
 }
 
@@ -262,7 +290,7 @@ h1 {
 //   text-shadow: 1px 1px #DC6ADA;
 //   color: #ffffff;
   margin-top: 2px;
-  margin: auto;
+  // margin: auto;
   // margin-left: 0px;
   border-radius: 100px;
 //   -moz-border-radius: 100px;
@@ -302,7 +330,7 @@ h1 {
   // border: solid;
   // background-color: #B6B6B6;
   // border-color: #006BB6;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   bottom: 0;
   text-align: center;
   font-size: 19px;
@@ -310,22 +338,36 @@ h1 {
 }
 
 .total-duration {
+  position: fixed;
+  bottom: 120px;
+  width: 100%;
   margin: auto;
   color: white;
   text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;
+  font-size: 27px;
+  // background-color:rgba(242, 241, 241, 0.3);
 }
 
+.total-timer {
+  position: fixed;
+  bottom: 85px;
+  width: 100%;
+  margin: auto;
+  font-size: 30px;
+  color: white;
+  text-shadow: -2px 0 black, 0  2px black, 2px 0 black, 0 -2px black;
+}
+
+
 .del-setlist {
+  float: right;
   font-size: 14px;
   text-decoration: none;
   margin: auto;
-  padding-bottom: 9px;
+  // padding-bottom: 9px;
 }
 
-p {
-  margin: 6px;
-}
-
+//By David Wood
 .footer-new {
   position: fixed;
   // text-shadow: -1.7px 0 black, 0 1.7px black, 1.7px 0 black, 0 -1.7px black;

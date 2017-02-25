@@ -7,9 +7,9 @@
     <!-- Data submission -->
   <body>
     <div class="header-cont">
-      <div class="header">
-        <h1><%= @setlist.title %></h1></div>
-
+      <div class="header-2">
+        <div class ="del-setlist"><%= link_to 'delete', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete-sl" %></div>
+        <h2><%= @setlist.title %></h2></div>
       <div class="content">
         <%= render 'song' %>
           <table class="song-table">
@@ -34,13 +34,12 @@
           </table>
 
       <!-- Setlist Duration -->
-      <div class="footer"><p class="total-duration">total setlist duration:<p>
-      <% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
+      <div class="total-duration">total setlist duration:</div>
+    <div class="total-timer"><% if @setlist.set_minutes == 0 && @setlist.set_seconds == 0 %>
       <%= "00:00" %>
       <% else %>
       <%= @setlist.set_minutes %>:<%= @setlist.set_seconds %>
-      <% end %>
-      <div class ="del-setlist"><%= link_to 'delete', setlist_path(@setlist), method: :delete, data: { confirm: 'Are you sure?' }, :id => "delete-sl" %></div>
+      <% end %></div>
     </div>
   </body>
 </html>
